@@ -60,7 +60,7 @@ cd backend
 Install required dependencies:
 
 ```bash
-pip install fastapi uvicorn sqlalchemy pydantic
+pip install -r requirements.txt
 ```
 
 > Note:  
