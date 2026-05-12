@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TaskFlow</h1>
+
+<form id="task-form">
+            <input type="text" id="task-title" placeholder="What needs to be done?" required>
+            <input type="text" id="task-desc" placeholder="Description (optional)">
+            
+            <select id="task-priority" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="low">Low priority (default)</option>
+                <option value="medium">Medium priority</option>
+                <option value="high">High priority</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="error-message" class="error hidden"></div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+            <div>
+                <strong>Status:</strong>
+                <select id="filter-status">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div>
+                <strong>Priority:</strong>
+                <select id="filter-priority">
+                    <option value="all">All Tasks</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+    <div id="edit-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 style="margin-top: 0;">Edit Task</h3>
+                <div id="modal-error-message" class="error hidden"></div>
+                <input type="hidden" id="edit-task-id">
+                
+                <input type="text" id="edit-task-title" placeholder="Task Title">
+                <input type="text" id="edit-task-desc" placeholder="Description (optional)">
+                
+                <strong>Priority:</strong>
+                <select id="edit-task-priority" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <div style="display: flex; gap: 10px;">
+                    <button id="save-edit-btn" style="flex: 1; background-color: #28a745;">Save Changes</button>
+                    <button id="cancel-edit-btn" style="flex: 1; background-color: #6c757d;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
