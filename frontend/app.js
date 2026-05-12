@@ -1,4 +1,10 @@
-const API_URL = 'http://127.0.0.1:8000/api/tasks';
+//ensureing the app works both
+const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+const API_URL = isLocal 
+    ? 'http://127.0.0.1:8000/api/tasks' 
+    : 'https://task-flow-backend-naham.onrender.com/api/tasks';
+
+
 const taskList = document.getElementById('task-list');
 const errorMessage = document.getElementById('error-message');
 const taskForm = document.getElementById('task-form');
