@@ -42,7 +42,7 @@ Task-Flow is a simple personal task management web application built to demonstr
 # Clone the Repository
 
 ```bash
-git clone <your-repository-url-here>
+git clone [<your-repository-url-here>](https://github.com/naham6/taskflow)
 cd task-flow
 ```
 
