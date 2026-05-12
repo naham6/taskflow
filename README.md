@@ -43,7 +43,7 @@ Task-Flow is a simple personal task management web application built to demonstr
 
 ```bash
 git clone https://github.com/naham6/taskflow
-cd task-flow
+cd taskflow
 ```
 
 ---
